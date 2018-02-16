@@ -3,7 +3,7 @@ var element=document.getElementById('main-text');
 element.innerHTML = 'new value';
 
 //move image
-var img=document.getElementById('madi')
+var img=document.getElementById('madi');
 var marginLeft=0;
 function moveRight(){
     marginLeft=marginLeft + 10;
