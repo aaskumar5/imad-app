@@ -22,8 +22,7 @@ button.onclick = function() {
    
 };
 
-var nameInput= document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     
@@ -34,4 +33,10 @@ submit.onclick = function(){
     }
     var ul = document.getElementById('namelist');
     ul.innnerHTML = list;
+    
+    var nameInput= document.getElementById('name');
+var name = nameInput.value;
+
+     request.open('GET','http://ashishkumarsahu2016.imad.hasura-app.io/submit-name?name=' + name,true);
+    request.send(null);
 };
