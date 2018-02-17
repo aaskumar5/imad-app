@@ -108,6 +108,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 var names=[];
+
 app.get('/submit-name/:name', function(req,res){
     var name = req.params.name;
     
