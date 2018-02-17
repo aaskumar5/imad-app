@@ -7,8 +7,13 @@ button.onclick = function() {
         if(request.readyState === XMLHttpRequest.Done){
             if(request.status === 200){
                 var counter = request.responseText;
-                var span = document.getElementById('count');
-                span.innerHTML = counter.toString();
+                names = JSON.porse(names);
+                var list ='';
+                for(var i=0;i<names.length;i++){
+                list += '<li>' + names[i] + '</li>';
+                }
+                var ul = document.getElementById('namelist');
+                ul.innnerHTML = list;
             }
         }
     };
